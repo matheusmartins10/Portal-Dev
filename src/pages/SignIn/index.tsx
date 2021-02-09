@@ -87,9 +87,9 @@ const SignIn: React.FC = () => {
 
             <Link to="forgot-password">Esqueci minha senha</Link>
           </Form>
-          <Link to="/signup">
+          <Link to="/signin/admin">
             <FiLogIn />
-            Criar conta
+            Acesso Administrador
           </Link>
         </AnimationContainer>
       </Content>

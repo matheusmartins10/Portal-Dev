@@ -65,7 +65,7 @@ export const AnimationContainer = styled.div`
   > a {
     color: #f4f4f4;
     display: block;
-    margin-top: -30px;
+    margin-top: 24px;
     text-decoration: none;
     display: flex;
     align-items: center;

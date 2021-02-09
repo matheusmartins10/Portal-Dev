@@ -1,6 +1,7 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
-import Route from './Route';
+import { Switch, Route } from 'react-router-dom';
+import Router from './Route';
+import RouteAdmin from './RouteAdmin';
 
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
@@ -9,13 +10,19 @@ import ResetPassword from '../pages/ResetPassword';
 
 import Dashboard from '../pages/Dashboard';
 
+import SignInAdmin from '../pages/SignInAdmin';
+import DashboardAdmin from '../pages/DashboardAdmin';
+
 const Routes: React.FC = () => (
   <Switch>
-    <Route path="/" exact component={SignIn} />
-    <Route path="/signup" component={SignUp} />
-    <Route path="/forgot-password" component={ForgotPassword} />
-    <Route path="/reset-password" component={ResetPassword} />
-    <Route path="/dashboard" component={Dashboard} isPrivate />
+    <Router path="/" exact component={SignIn} />
+    <RouteAdmin path="/signup" component={SignUp} isPrivate />
+    <Router path="/forgot-password" component={ForgotPassword} />
+    <Router path="/reset-password" component={ResetPassword} />
+    <Router path="/dashboard" component={Dashboard} isPrivate />
+
+    <RouteAdmin path="/signin/admin" component={SignInAdmin} />
+    <RouteAdmin path="/admin" component={DashboardAdmin} isPrivate />
   </Switch>
 );
 
