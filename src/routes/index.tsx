@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import Router from './Route';
 import RouteAdmin from './RouteAdmin';
 
@@ -12,6 +12,7 @@ import Dashboard from '../pages/Dashboard';
 
 import SignInAdmin from '../pages/SignInAdmin';
 import DashboardAdmin from '../pages/DashboardAdmin';
+import SignupAdmin from '../pages/SignUpAdmin';
 
 const Routes: React.FC = () => (
   <Switch>
@@ -23,6 +24,7 @@ const Routes: React.FC = () => (
 
     <RouteAdmin path="/signin/admin" component={SignInAdmin} />
     <RouteAdmin path="/admin" component={DashboardAdmin} isPrivate />
+    <RouteAdmin path="/new/admin" component={SignupAdmin} isPrivate />
   </Switch>
 );
 

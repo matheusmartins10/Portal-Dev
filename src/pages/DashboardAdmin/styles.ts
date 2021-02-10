@@ -77,6 +77,13 @@ export const Content = styled.main`
   flex-direction: column;
 `;
 
+export const Table = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+`;
+
 export const SectionCard = styled.div`
   display: flex;
   align-items: center;
@@ -103,5 +110,19 @@ export const SectionCard = styled.div`
   @media (max-width: 425px) {
     max-width: 260px;
     margin: 30px 0;
+  }
+`;
+
+export const AddUser = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  a {
+    text-decoration: none;
+    color: #f2f2f2;
+    margin: 20px 10px;
   }
 `;
